@@ -83,6 +83,19 @@ OurApp.get("/author/:authorID", (req, res) => {
   res.json(getAuthor);
 });
 
+// Route    - /author/book/:isbn
+// Desc     - to get list of author based on a book
+// Access   - Public
+// Method   - GET
+// Params   - isbn
+// Body     - none
+OurApp.get("/author/book/:isbn", (req, res) => {
+  const getAuthor = Database.Author.filter((author) =>
+    author.books.includes(req.params.isbn)
+  );
+  res.json(getAuthor);
+});
+
 // Route    - /publications
 // Desc     - to get all publication
 // Access   - Public
@@ -104,6 +117,19 @@ OurApp.get("/publications/:publicationID", (req, res) => {
     (publication) => publication.id === parseInt(req.params.publicationID)
   );
   res.json({ publication: getPublication });
+});
+
+// Route    - /publications/book/:isbn
+// Desc     - to get a list of publication based on a book.
+// Access   - Public
+// Method   - GET
+// Params   - isbn
+// Body     - none
+OurApp.get("/publications/book/:isbn", (req, res) => {
+  const getPublication = Database.Publication.filter((publication) =>
+    publication.books.includes(req.params.isbn)
+  );
+  res.json(getPublication);
 });
 
 OurApp.listen(4000, () => console.log("Server is up👍"));
