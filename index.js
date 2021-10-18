@@ -1,8 +1,11 @@
+const { response } = require("express");
 const express = require("express");
 
 const Database = require("./database");
 
 const OurApp = express();
+
+OurApp.use(express.json());
 
 OurApp.get("/", (request, response) => {
   response.json({ message: "Request served!!!!" });
@@ -130,6 +133,41 @@ OurApp.get("/publications/book/:isbn", (req, res) => {
     publication.books.includes(req.params.isbn)
   );
   res.json(getPublication);
+});
+
+// Route    - /books/new
+// Desc     - to add new book
+// Access   - Public
+// Method   - post
+// Params   - none
+// Body     - none
+OurApp.post("/books/new", (req, res) => {
+  console.log(req.body);
+  return res.json("Book Added Successfully");
+});
+
+// Route    - /author/new
+// Desc     - to add new author
+// Access   - Public
+// Method   - post
+// Params   - none
+// Body     - none
+OurApp.post("/author/new", (req, res) => {
+  const { newAuthor } = req.body;
+  console.log(newAuthor);
+  return res.json({ message: "Author Added Successfully" });
+});
+
+// Route    - /publications/new
+// Desc     - Add new publication
+// Access   - Public
+// Method   - post
+// Params   - none
+// Body     - none
+OurApp.post("/publications/new", (req, res) => {
+  const publication = req.body;
+  console.log(publication);
+  return res.json("Publication added successfully");
 });
 
 OurApp.listen(4000, () => console.log("Server is up👍"));

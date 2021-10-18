@@ -24,7 +24,7 @@ Book
     - to get a list of books based on category ✅
     - to get a list of books based on author -> [Task] ✅
  - POST
-    - to add new book
+    - to add new book✅
  - PUT
     - to update book details
     - to update/add new author
@@ -37,7 +37,7 @@ Authors
     - to get specific author -> [Task] ✅
     - to get list of author based on a book✅
  - POST
-    - to add new author
+    - to add new author✅
     - to update/add new book
  - PUT
     - update author details
@@ -49,7 +49,7 @@ Publication
     - to get specific publication -> [Task] ✅
     - to get a list of publication based on a book. -> [Task] ✅
  - POST
-    - Add new publication
+    - Add new publication✅
  - PUT
     - update publication 
     - to update/add new book
