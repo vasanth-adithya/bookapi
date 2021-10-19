@@ -26,11 +26,11 @@ Book
  - POST
     - to add new book✅
  - PUT
-    - to update book details
-    - to update/add new author
+    - to update book details✅
+    - to update/add new author✅
  - DELETE
-    - delete a book
-    - delete an author from the book
+    - delete a book ✅
+    - delete an author from the book✅
 Authors
  - GET
     - to get all authors ✅
@@ -40,9 +40,9 @@ Authors
     - to add new author✅
     - to update/add new book
  - PUT
-    - update author details
+    - update author details✅
  - DELETE
-    - delete an author
+    - delete an author✅
 Publication
  - GET
     - to get all publication -> [Task] ✅
@@ -51,11 +51,11 @@ Publication
  - POST
     - Add new publication✅
  - PUT
-    - update publication 
-    - to update/add new book
+    - update publication ✅
+    - to update/add new book✅
  - DELETE
-    - delete a book from publication
-    - delete a publication
+    - delete a book from publication✅
+    - delete a publication✅
 */
 
 /*
