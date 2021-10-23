@@ -52,7 +52,7 @@ Router.get("/book/:isbn", async (req, res) => {
 // Access   - Public
 // Method   - post
 // Params   - none
-// Body     - none
+// Body     - { newAuthor: { details } }
 Router.post("/new", (req, res) => {
   const { newAuthor } = req.body;
   AuthorModel.create(newAuthor);
@@ -64,7 +64,7 @@ Router.post("/new", (req, res) => {
 // Access   - Public
 // Method   - put
 // Params   - id
-// Body     - none
+// Body     - { "name": { newName } }
 Router.put("/updateName/:id", async (req, res) => {
   const updateAuthor = await AuthorModel.findOneAndUpdate(
     {

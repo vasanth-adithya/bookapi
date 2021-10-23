@@ -77,7 +77,7 @@ Router.get("/a/:authorID", async (req, res) => {
 // Access   - Public
 // Method   - post
 // Params   - none
-// Body     - none
+// Body     - { newBook : { details } }
 Router.post("/new", async (req, res) => {
   try {
     const { newBook } = req.body;
@@ -93,7 +93,7 @@ Router.post("/new", async (req, res) => {
 // Access   - Public
 // Method   - put
 // Params   - isbn
-// Body     - none
+// Body     - { title: newTtile }
 Router.put("/updateTitle/:isbn", async (req, res) => {
   const { title } = req.body.title;
 
@@ -117,7 +117,7 @@ Router.put("/updateTitle/:isbn", async (req, res) => {
 // Access   - Public
 // Method   - put
 // Params   - isbn
-// Body     - none
+// Body     - { "newAuthor": id }
 Router.put("/updateAuthor/:isbn", async (req, res) => {
   const { newAuthor } = req.body;
   const { isbn } = req.params;
