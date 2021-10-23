@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const Book = require("./API/book");
 const Author = require("./API/author");
 const Publication = require("./API/publication");
-const database = require("./database");
+
 // connecting to mongoose
 mongoose
   .connect(process.env.MONGO_URI, {

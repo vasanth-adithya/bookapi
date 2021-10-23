@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { Book } = require("../database");
 
 //Create a book schema
 const BookSchema = mongoose.Schema({
