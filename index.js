@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-
+const port = process.env.PORT || 4000
 //API
 const Book = require("./API/book");
 const Author = require("./API/author");
@@ -33,4 +33,4 @@ OurApp.get("/", (request, response) => {
   response.json({ message: "Request served!!!!" });
 });
 
-OurApp.listen(4000, () => console.log("Server is up👍"));
+OurApp.listen(port, () => console.log("Server is up👍"));
